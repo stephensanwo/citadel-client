@@ -1,0 +1,76 @@
+// App Navbar
+
+.app-nav {
+  height: 60px;
+  background-color: #ffffff;
+  display: flex;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  padding-left: 100px;
+  z-index: 1;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.app-nav .nav-tabs {
+  flex-basis: 40%;
+  border-right: 1px solid #e8e8e8;
+}
+.app-nav .nav-search {
+  flex-basis: 40%;
+  border-right: 1px solid #e8e8e8;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.app-nav .nav-actions {
+  flex-basis: 20%;
+  display: flex;
+}
+
+.app-nav .nav-action-1,
+.app-nav .nav-action-2 {
+  border-right: 1px solid #e8e8e8;
+  width: 100px;
+}
+
+.app-nav .nav-tabs h4 {
+  color: #0d1116;
+  font-family: "display-text-light";
+  font-size: 0.8rem;
+}
+
+.app-nav .nav-tabs-content {
+  display: flex;
+
+  width: 50%;
+  height: 100%;
+  margin: auto;
+  justify-content: space-between;
+  align-items: flex-end;
+  cursor: pointer;
+}
+.app-nav .nav-tab-0,
+.app-nav.nav-tab-1,
+.app-nav .nav-tab-2,
+.app-nav .nav-tab-3,
+.app-nav .nav-tab-4 {
+  width: 130px;
+  height: 50px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.app-nav .nav-tab-0:hover,
+.app-nav .nav-tab-1:hover,
+.app-nav .nav-tab-2:hover,
+.app-nav .nav-tab-3:hover,
+.app-nav .nav-tab-4:hover {
+  border-bottom: 4px solid #0f62fe;
+}
+
+.app-nav .nav-tab-clicked {
+  border-bottom: 4px solid #0f62fe;
+}
