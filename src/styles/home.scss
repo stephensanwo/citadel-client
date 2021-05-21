@@ -13,8 +13,10 @@
 }
 
 .app-nav .nav-tabs {
-  flex-basis: 40%;
+  flex-basis: 20%;
   border-right: 1px solid #e8e8e8;
+
+  padding-top: 0.5rem;
 }
 .app-nav .nav-search {
   flex-basis: 40%;
@@ -31,9 +33,10 @@
 }
 
 .app-nav .nav-action-1,
-.app-nav .nav-action-2 {
+.app-nav .nav-action-2,
+.app-nav .nav-action-3 {
   border-right: 1px solid #e8e8e8;
-  width: 100px;
+  width: 120px;
 }
 
 .app-nav .nav-tabs h4 {

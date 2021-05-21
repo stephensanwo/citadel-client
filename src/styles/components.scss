@@ -117,10 +117,44 @@
   height: 100%;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
+  cursor: pointer;
 }
 
 .sort-container h4 {
   color: #0f62fe;
   font-size: 0.8rem;
   font-family: "display-text";
+}
+
+// Options
+
+.options-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding-left: 1.2rem;
+  padding-right: 1.2rem;
+  cursor: pointer;
+}
+
+.options-text {
+  width: 80%;
+}
+.options-icon {
+  margin-left: 0.5rem;
+  width: 20%;
+}
+
+.options-container h4 {
+  color: #0d1116;
+
+  font-size: 0.8rem;
+  font-family: "display-text";
+}
+
+.options-container:hover,
+.options-container:hover h4 {
+  color: #0f62fe;
 }
