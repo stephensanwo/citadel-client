@@ -16,11 +16,20 @@ const SearchBox = ({
   searchData,
   onInput,
 }) => {
-  console.log(searchData);
   return (
-    <div className="search-box-container">
+    <div
+      className={
+        searchData.length > 0
+          ? `search-container-override`
+          : `search-box-container`
+      }
+    >
       <input
-        className={`search-box-${size}`}
+        className={
+          searchData.length > 0
+            ? `search-box-${size}-override`
+            : `search-box-${size}`
+        }
         type="text"
         placeholder={placeholder}
         value={searchData}
