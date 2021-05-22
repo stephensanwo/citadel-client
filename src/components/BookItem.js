@@ -20,9 +20,9 @@ const BookItem = ({ book }) => {
             {book.Authors.length > 60 ? ". . ." : ""}
           </p>
           <p style={{ marginTop: "1rem" }}> Language: {book.Language}</p>
-          <p>Extension: {book.Extension}</p>
-          <p>Size: {book.Size}</p>
-          <p>Year: {book.Year}</p>
+          <p style={{ marginTop: "0.1rem" }}>Extension: {book.Extension}</p>
+          <p style={{ marginTop: "0.1rem" }}>Size: {book.Size}</p>
+          <p style={{ marginTop: "0.1rem" }}>Year: {book.Year}</p>
           <div
             style={{
               marginTop: "1rem",

@@ -7,6 +7,8 @@ import SearchSuggestions from "../components/SearchSuggestions";
 import "../styles/seach-page.scss";
 import { books } from "../data/response";
 import BookItem from "../components/BookItem";
+import Filter from "../components/Filter";
+import Sort from "../components/Sort";
 
 const Search = (props) => {
   console.log(props.match.params.q);
@@ -61,6 +63,17 @@ const Search = (props) => {
       </div>
       <div className="search-page-body">
         <div className="search-grid">
+          <div className="search-page-actions">
+            <div style={{ flexBasis: "10%" }}>
+              {" "}
+              <Filter />
+            </div>
+            <div style={{ flexBasis: "80%" }}></div>
+            <div style={{ flexBasis: "10%" }}>
+              {" "}
+              <Sort />
+            </div>
+          </div>
           <div className="grid-container">
             {books.map((book, index) => (
               <BookItem key={index} book={book} />

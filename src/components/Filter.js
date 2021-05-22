@@ -22,12 +22,7 @@ const Filter = () => {
   ];
   return (
     <Fragment>
-      <motion.div
-        className="filter-container"
-        whileHover={{ borderBottom: "4px solid #0f62fe" }}
-        transition={{ ease: "easeOut", duration: 0.1 }}
-        onClick={handleFilterState}
-      >
+      <motion.div className="filter-container" onClick={handleFilterState}>
         <div>
           <h4>Filter</h4>
         </div>

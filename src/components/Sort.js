@@ -5,11 +5,7 @@ import "../styles/components.scss";
 
 const Sort = () => {
   return (
-    <motion.div
-      className="sort-container"
-      whileHover={{ borderBottom: "4px solid #0f62fe" }}
-      transition={{ ease: "easeOut", duration: 0.1 }}
-    >
+    <motion.div className="sort-container">
       <div>
         <h4>Sort</h4>
       </div>

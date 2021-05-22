@@ -169,11 +169,10 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 80%;
   height: 100%;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
-
   cursor: pointer;
 }
 
@@ -184,18 +183,19 @@ textarea {
 }
 
 .filter-dropdown {
-  height: 200px;
+  height: 100px;
   background-color: #ffffff;
   width: 200px;
   -moz-box-shadow: 0px 6px 12px #0d11161a;
   -webkit-box-shadow: 0px 6px 12px #0d11161a;
   box-shadow: 0px 6px 12px #0d11161a;
+  position: absolute;
 }
 
 .filter-content li {
   color: #0d1116;
   cursor: pointer;
-  height: 45px;
+  height: 40px;
   padding-top: 1rem;
   padding-left: 1rem;
   font-size: 0.8rem;
@@ -213,7 +213,7 @@ textarea {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 80%;
   height: 100%;
   padding-left: 1.2rem;
   padding-right: 1.2rem;
