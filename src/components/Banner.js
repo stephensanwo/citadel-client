@@ -35,7 +35,7 @@ const Banner = () => {
         <div className="banner-text">
           <div className="banner-text-content">
             <h1>Citadel</h1>
-            <p>Find and download any book</p>
+            <p>Download any book</p>
           </div>
         </div>
         <div className="banner-animation">

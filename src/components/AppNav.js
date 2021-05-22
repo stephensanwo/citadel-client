@@ -3,12 +3,12 @@ import SearchBox from "./SearchBox";
 import Filter from "./Filter";
 import Options from "./Options";
 
-const AppNav = ({ searchBar }) => {
+const AppNav = () => {
   return (
     <div className="app-nav">
       <div className="nav-tabs">
         <h4>Citadel</h4>
-        <small>Find and download any book</small>
+        <small>Download any book</small>
       </div>
 
       <div className="nav-actions">

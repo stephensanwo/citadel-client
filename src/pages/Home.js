@@ -3,6 +3,7 @@ import "../styles/home.scss";
 import Banner from "../components/Banner";
 
 import AppNav from "../components/AppNav";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const [searchData, setSearchData] = useState("");
@@ -14,8 +15,9 @@ const Home = () => {
 
   return (
     <Fragment>
-      <AppNav props={{ searchBar: false }} />
+      <AppNav />
       <Banner />
+      <Footer />
     </Fragment>
   );
 };
