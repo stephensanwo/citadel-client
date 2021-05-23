@@ -1,25 +1,30 @@
-import { findByRole } from "@testing-library/dom";
 import React from "react";
+import { motion } from "framer-motion";
 import DefaultImage from "../assets/img/sample_book.jpg";
 import { CloudDownload16, Launch16 } from "@carbon/icons-react";
 
 const BookItem = ({ book }) => {
   return (
-    <div className="book-item-container">
+    <motion.div
+      className="book-item-container"
+      //   whileHover={{ z: 10, backgroundColor: "#f5f5f7" }}
+      //   transition={{ ease: "easeOut", duration: 0.3 }}
+    >
       <div style={{ display: "flex" }}>
         <div className="book-item-image">
-          <img src={DefaultImage} alt="Book Image" width="100%" height="100%" />
+          <img src={"DefaultImage"} alt="" width="100%" height="100%" />
         </div>
         <div className="book-item-title">
           <h4>
-            {`${book.Title}`.slice(0, 60)}{" "}
-            {book.Title.length > 60 ? ". . ." : ""}
+            {`${book.Title}`.slice(0, 140)}{" "}
+            {book.Title.length > 140 ? ". . ." : ""}
           </h4>
-          <p style={{ marginTop: "1rem" }}>
-            Author: {`${book.Authors}`.slice(0, 60)}{" "}
-            {book.Authors.length > 60 ? ". . ." : ""}
+          <p style={{ marginTop: "0.5rem", fontSize: "0.9rem" }}>
+            Author: {`${book.Authors}`.slice(0, 70)}{" "}
+            {book.Authors.length > 70 ? ". . ." : ""}
           </p>
-          <p style={{ marginTop: "1rem" }}> Language: {book.Language}</p>
+          <p style={{ marginTop: "1rem" }}> Publisher: {book.Publisher}</p>
+          <p style={{ marginTop: "0.1rem" }}> Language: {book.Language}</p>
           <p style={{ marginTop: "0.1rem" }}>Extension: {book.Extension}</p>
           <p style={{ marginTop: "0.1rem" }}>Size: {book.Size}</p>
           <p style={{ marginTop: "0.1rem" }}>Year: {book.Year}</p>
@@ -27,7 +32,8 @@ const BookItem = ({ book }) => {
             style={{
               marginTop: "1rem",
               display: "flex",
-              justifyContent: "space-between",
+              justifyContent: "left",
+              gap: "2rem",
               paddingRight: "3rem",
             }}
           >
@@ -44,7 +50,7 @@ const BookItem = ({ book }) => {
           </div>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 };
 

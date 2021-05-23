@@ -9,6 +9,7 @@ import { books } from "../data/response";
 import BookItem from "../components/BookItem";
 import Filter from "../components/Filter";
 import Sort from "../components/Sort";
+import SearchSideBar from "../components/SearchSideBar";
 
 const Search = (props) => {
   console.log(props.match.params.q);
@@ -80,7 +81,9 @@ const Search = (props) => {
             ))}
           </div>
         </div>
-        <div className="search-side-bar">Side Bar</div>
+        <div className="search-side-bar">
+          <SearchSideBar />
+        </div>
       </div>
     </div>
   );

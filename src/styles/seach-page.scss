@@ -2,7 +2,7 @@
 .search-page-header {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 60%;
 
   height: 200px;
 
@@ -43,14 +43,14 @@
 }
 
 .search-grid {
-  flex-basis: 70%;
+  flex-basis: 60%;
   padding: 1rem;
-  padding-top: 2rem;
-  background-color: #f5f5f7;
+
+  //   background-color: #f5f5f7;
 }
 
 .search-page-actions {
-  max-width: 1206px;
+  max-width: 800px;
   height: 50px;
   margin: auto;
 
@@ -58,11 +58,11 @@
 }
 
 .grid-container {
-  max-width: 1206px;
+  max-width: 800px;
   margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  grid-gap: 2px;
+  //   display: grid;
+  //   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  //   grid-gap: 25px;
 }
 
 .search-side-bar {
@@ -73,33 +73,35 @@
 // Book Item
 .book-item-container {
   background-color: #ffffff;
-  width: 400px;
+  width: 800px;
   height: 235px;
   cursor: pointer;
   justify-self: center;
   padding: 1rem;
+  margin-bottom: 2rem;
 }
 
 .book-item-image {
   width: 200px;
   height: 200px;
-  flex-basis: 40%;
-  //   background-color: #0f62fe;
+  flex-basis: 20%;
+  background: url("../assets/img/Placeholder-Vector-Art-Icon.png") no-repeat
+    center;
   border: none;
 }
 
 .book-item-image img {
-  object-fit: contain;
-  border: none;
+  object-fit: cover;
+  border: 1px solid #ffffff00;
 }
 
 .book-item-title {
-  flex-basis: 60%;
-  padding-left: 1rem;
+  flex-basis: 80%;
+  padding-left: 2rem;
 }
 
 .book-item-title h4 {
-  font-size: 0.9rem;
+  font-size: 1rem;
   line-height: 1.2;
   color: #0f62fe;
 }
