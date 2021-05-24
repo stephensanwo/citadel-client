@@ -15,6 +15,7 @@ const SearchBox = ({
   setSearchData,
   searchData,
   onInput,
+  onSearch,
 }) => {
   return (
     <div
@@ -39,25 +40,64 @@ const SearchBox = ({
       {searchData.length === 0 ? (
         <div className={`search-icon-${size}`}>
           {size === "small" || size === "small-long" ? (
-            <Search16 fill="#0f62fe" />
+            <div className="search-box-actions">
+              <div style={{ width: "24px" }}></div>
+              <Search16 fill="#0f62fe" style={{ cursor: "pointer" }} />
+            </div>
           ) : size === "medium" ? (
-            <Search24 fill="#0f62fe" />
+            <div className="search-box-actions">
+              <div style={{ width: "24px" }}></div>
+              <Search24 fill="#0f62fe" style={{ cursor: "pointer" }} />
+            </div>
           ) : (
-            <Search32 fill="#0f62fe" />
+            <div className="search-box-actions">
+              <div style={{ width: "24px" }}></div>
+              <Search32 fill="#0f62fe" style={{ cursor: "pointer" }} />
+            </div>
           )}
         </div>
       ) : (
-        <div
-          className={`search-icon-${size} search-icon-close`}
-          onClick={() => setSearchData("")}
-        >
+        <div className={`search-icon-${size} search-icon-close`}>
           {" "}
           {size === "small" || size === "small-long" ? (
-            <Close24 fill="#fa4d56" />
+            <div className="search-box-actions">
+              <Close24
+                fill="#fa4d56"
+                onClick={() => setSearchData("")}
+                style={{ cursor: "pointer" }}
+              />
+              <Search16
+                fill="#0f62fe"
+                onClick={onSearch}
+                style={{ cursor: "pointer" }}
+              />
+            </div>
           ) : size === "medium" ? (
-            <Close24 fill="#fa4d56" />
+            <div className="search-box-actions">
+              <Close24
+                fill="#fa4d56"
+                onClick={() => setSearchData("")}
+                style={{ cursor: "pointer" }}
+              />
+              <Search24
+                fill="#0f62fe"
+                onClick={onSearch}
+                style={{ cursor: "pointer" }}
+              />
+            </div>
           ) : (
-            <Close32 fill="#fa4d56" />
+            <div className="search-box-actions">
+              <Close32
+                fill="#fa4d56"
+                onClick={() => setSearchData("")}
+                style={{ cursor: "pointer" }}
+              />
+              <Search32
+                fill="#0f62fe"
+                onClick={onSearch}
+                style={{ cursor: "pointer" }}
+              />
+            </div>
           )}
         </div>
       )}

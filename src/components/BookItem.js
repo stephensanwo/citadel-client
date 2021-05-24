@@ -12,7 +12,14 @@ const BookItem = ({ book }) => {
     >
       <div style={{ display: "flex" }}>
         <div className="book-item-image">
-          <img src={"DefaultImage"} alt="" width="100%" height="100%" />
+          <img
+            src={book.Image_Url}
+            alt=""
+            width="100%"
+            height="100%"
+            referrerPolicy="no-referrer"
+            loading="eager"
+          />
         </div>
         <div className="book-item-title">
           <h4>
@@ -42,10 +49,6 @@ const BookItem = ({ book }) => {
                 Download
               </p>
               <CloudDownload16 fill="#0f62fe" />
-            </div>
-            <div style={{ display: "flex" }}>
-              <p style={{ color: "#0f62fe", marginRight: "0.3rem" }}>View</p>
-              <Launch16 fill="#0f62fe" />
             </div>
           </div>
         </div>

@@ -18,7 +18,7 @@
   width: 800px;
   margin-left: auto;
   margin-right: auto;
-  padding-left: 35px;
+  padding-left: 1rem;
 }
 .search-page-term h4 {
   font-size: 2rem;
@@ -59,15 +59,25 @@
 
 .grid-container {
   max-width: 800px;
+  min-height: 800px;
   margin: auto;
   //   display: grid;
   //   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
   //   grid-gap: 25px;
 }
 
+// Side Bar
+
 .search-side-bar {
-  flex-basis: 30%;
-  background-color: red;
+  flex-basis: 20%;
+}
+
+.side-bar-container {
+  margin-top: 4rem;
+  min-height: 700px;
+  padding: 1rem;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px 10px 10px 10px;
 }
 
 // Book Item
@@ -109,4 +119,36 @@
 .book-item-title p {
   font-size: 0.7rem;
   line-height: 1.2;
+}
+
+// Accordion
+
+// Accordion
+
+.tools-accordion {
+  width: 100%;
+}
+
+.bx--accordion__heading:hover::before {
+  background-color: transparent;
+  outline: none;
+}
+
+.bx--accordion__content {
+  width: 100%;
+  padding-right: 0;
+}
+
+.bx--accordion__item {
+  outline: none;
+  border: none;
+}
+.bx--accordion__title {
+  font-size: 0.9rem;
+  line-height: 1.2;
+  font-family: "display-text";
+}
+
+.bx--accordion__item:last-child {
+  border-bottom: none;
 }

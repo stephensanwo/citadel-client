@@ -58,7 +58,7 @@ textarea {
   font-family: "display-text";
   padding: 1rem;
   padding-left: 35px;
-  padding-right: 55px;
+  padding-right: 100px;
 }
 
 .search-box-container input::placeholder {
@@ -88,7 +88,7 @@ textarea {
   font-family: "display-text";
   padding: 1rem;
   padding-left: 35px;
-  padding-right: 55px;
+  padding-right: 100px;
   box-shadow: none;
   border: none;
   border-bottom: 1px solid #e8e8e8;
@@ -127,9 +127,9 @@ textarea {
   position: absolute;
   margin-left: 355px;
   // background-color: #ffdb13;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
+  height: 50px;
+  width: 100px;
+  border-radius: 0px 25px 0px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -137,11 +137,11 @@ textarea {
 
 .search-icon-medium {
   position: absolute;
-  margin-left: 755px;
+  margin-left: 700px;
   // background-color: #ffdb13;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
+  height: 50px;
+  width: 100px;
+  border-radius: 0px 25px 0px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -151,9 +151,9 @@ textarea {
   position: absolute;
   margin-left: 755px;
   // background-color: #ffdb13;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
+  height: 50px;
+  width: 100px;
+  border-radius: 0px 25px 0px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,6 +162,11 @@ textarea {
 // .search-icon-close {
 //   // background-color: #fa4d56;
 // }
+
+.search-box-actions {
+  display: flex;
+  gap: 10px;
+}
 
 // Filter
 

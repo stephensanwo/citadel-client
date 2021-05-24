@@ -10,7 +10,10 @@ const Footer = () => {
   return (
     <div className="footer-container">
       <div className="footer-content">
-        <p>© Stephen Sanwo 2020</p>
+        <p style={{ textAlign: "center" }}>
+          Important Note: This is an experimental app for demonstration purposes
+          only, and is not intended to be a commercial product
+        </p>
 
         <div className="footer-logo">
           <p style={{ marginRight: "0.5rem" }}>stephensanwo.dev</p> <p>|</p>

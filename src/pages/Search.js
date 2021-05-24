@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useEffect, useState } from "react";
 import "../styles/home.scss";
 import AppNav from "../components/AppNav";
 import { autocomplete } from "../data/autocomplete";
@@ -10,14 +10,46 @@ import BookItem from "../components/BookItem";
 import Filter from "../components/Filter";
 import Sort from "../components/Sort";
 import SearchSideBar from "../components/SearchSideBar";
+import { axios } from "../middleware/axios";
+import Spinner from "../components/Spinner";
 
 const Search = (props) => {
   console.log(props.match.params.q);
   const [searchData, setSearchData] = useState("");
-
+  const [bookData, setBookData] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [suggestions, setSuggestions] = useState([]);
 
-  const handleSearch = (e) => {
+  const params = {
+    q: searchData,
+    search_type: "book",
+  };
+
+  useEffect(() => {
+    const params = {
+      q: "docker",
+      search_type: "book",
+    };
+    const SEARCH_BOOK = async () => {
+      setLoading(true);
+      try {
+        const data = await axios.get("/search", {
+          headers: { "Content-Type": "application/json" },
+          params: params,
+        });
+        setBookData(data);
+        setLoading(false);
+      } catch (err) {
+        setLoading(false);
+      }
+    };
+
+    SEARCH_BOOK();
+  }, []);
+
+  console.log(bookData);
+
+  const handleInput = (e) => {
     e.preventDefault();
     setSearchData(e.target.value);
     setSuggestions(
@@ -26,6 +58,29 @@ const Search = (props) => {
       )
     );
   };
+
+  const handleSearch = (e) => {
+    e.preventDefault();
+    setSuggestions([]);
+
+    const SEARCH_BOOK = async () => {
+      setLoading(true);
+      try {
+        const data = await axios.get("/search", {
+          headers: { "Content-Type": "application/json" },
+          params: params,
+        });
+        setBookData(data);
+        setLoading(false);
+      } catch (err) {
+        setLoading(false);
+      }
+    };
+
+    SEARCH_BOOK();
+  };
+
+  console.log(bookData);
 
   return (
     <div>
@@ -49,7 +104,8 @@ const Search = (props) => {
               placeholder={"Find a book"}
               searchData={searchData}
               setSearchData={setSearchData}
-              onInput={handleSearch}
+              onInput={handleInput}
+              onSearch={handleSearch}
             />
             {searchData.length > 0 ? (
               <SearchSuggestions
@@ -57,7 +113,7 @@ const Search = (props) => {
                 setSearchData={setSearchData}
               />
             ) : (
-              <Fragment />
+              <Fragment></Fragment>
             )}
           </div>
         </div>
@@ -75,11 +131,17 @@ const Search = (props) => {
               <Sort />
             </div>
           </div>
-          <div className="grid-container">
-            {books.map((book, index) => (
-              <BookItem key={index} book={book} />
-            ))}
-          </div>
+          {loading ? (
+            <div className="grid-container">
+              <Spinner />
+            </div>
+          ) : (
+            <div className="grid-container">
+              {bookData.data.map((book, index) => (
+                <BookItem key={index} book={book} />
+              ))}
+            </div>
+          )}
         </div>
         <div className="search-side-bar">
           <SearchSideBar />
